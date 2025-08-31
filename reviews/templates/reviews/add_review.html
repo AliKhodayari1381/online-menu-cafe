@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}افزودن نظر{% endblock %}
+
+{% block content %}
+    <h1 class="text-center mb-4">افزودن نظر</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="name" class="form-label">نام:</label>
+            <input type="text" id="name" name="name" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="comment" class="form-label">نظر شما:</label>
+            <textarea id="comment" name="comment" class="form-control"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="rating" class="form-label">امتیاز:</label>
+            <select id="rating" name="rating" class="form-control">
+                <option value="5">⭐⭐⭐⭐⭐</option>
+                <option value="4">⭐⭐⭐⭐</option>
+                <option value="3">⭐⭐⭐</option>
+                <option value="2">⭐⭐</option>
+                <option value="1">⭐</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-success">ثبت نظر</button>
+    </form>
+{% endblock %}

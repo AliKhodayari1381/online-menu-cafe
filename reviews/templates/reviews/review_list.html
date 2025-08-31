@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load jformat %}
+
+{% block title %}نظرات کاربران{% endblock %}
+
+{% block content %}
+    <h1 class="text-center mb-4">نظرات کاربران</h1>
+    {% for review in reviews %}
+        <div class="card mb-3 shadow">
+            <div class="card-body">
+                <h5 class="card-title">{{ review.name }}</h5>
+                <p class="card-text">{{ review.comment }}</p>
+                <p class="text-warning">{{ review.rating }} ⭐</p>
+                <small class="text-muted">{{ review.created_at|jformat:"%Y/%m/%d"}}<br>{{ review.created_at|jformat:"%H:%M" }}</small>
+            </div>
+        </div>
+    {% endfor %}
+    <a href="{% url 'add_review' %}" class="btn btn-primary">افزودن نظر</a>
+{% endblock %}

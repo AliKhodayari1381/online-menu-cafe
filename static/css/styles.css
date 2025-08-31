@@ -1,0 +1,84 @@
+/* فونت فارسی */
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    background: linear-gradient(120deg, #ff8c00, #e52e71);
+    color: white;
+}
+
+/* استایل هدر */
+h1, h2, h3 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* دکمه‌های جذاب */
+.btn-primary {
+    background: #ff5722;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+.btn-primary:hover {
+    background: #e64a19;
+    transform: scale(1.05);
+}
+
+/* کارت‌های زیبا */
+.card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* انیمیشن ورود صفحه */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+.navbar {
+    background: rgba(255, 87, 34, 0.8);  /* نارنجی شفاف */
+    backdrop-filter: blur(10px); /* بلور زیبا */
+    border-bottom: 2px solid rgb(132, 66, 0);
+}
+
+/* رنگ لینک‌های نوار منو */
+.navbar .nav-link {
+    color: rgb(0, 0, 0) !important;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+.navbar .nav-link:hover {
+    color: #ffccbc !important;  /* نارنجی روشن */
+}
+
+/* دکمه همبرگری */
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+.navbar-toggler-icon {
+    filter: invert(1); /* تغییر رنگ آیکون به سفید */
+}
+.custom-navbar {
+    background: rgba(255, 242, 57, 0.507); /* نارنجی شفاف */
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
