@@ -21,7 +21,7 @@
 ### 1. کلون کردن پروژه
 ```bash
 git clone https://github.com/AliKhodayari1381/online-menu-cafe.git
-cd online-resume-builder
+cd online-menu-cafe
 ```
 
 2. ساخت محیط مجازی و نصب پکیج‌ها
